@@ -1,0 +1,119 @@
+:root {
+    --brandYellow: #F9BD38;
+    --brandBlue: #7FA8D6;
+    --brandGreen: #3B8D7C;
+    --brandBlack: #000;
+    --brandRed: #F94936;
+    --fontTitle: font-family: "futura-pt", sans-serif;
+
+}
+body {
+    background-color: var(--brandYellow);
+    font-family: "nimbus-roman", serif;
+    margin: 0;
+}
+h1 {
+    font-family: var(--fontTitle);
+    font-size: 6rem;
+}
+h2 {
+    font-family: var(--fontTitle);
+    font-size: 8rem;
+}
+h3 {
+    font-family: var(--fontTitle);
+    font-size: 5rem;
+}
+
+header {
+    height: 100vh;
+}
+.intro {
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+.intro h1, .intro h2, .intro img {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+}
+.intro h1, .intro h2 {
+    margin: 20vh auto;
+
+}
+
+.paralax { 
+    /* background-color: #000; */
+    margin: -300px 0 0;
+}
+.paralax-wrapper {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+.paralax img, .paralax .paralax-title {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+}
+.paralax .meow {
+    bottom: -218px;
+}
+.paralax-title {
+    color: white;
+    margin: 20vh auto;
+    text-align: center;
+}
+
+.discography {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.year {
+    font-size: 7rem;
+    transform: rotate(-90deg);
+    transform-origin: center;
+    width: max-content;
+    margin: 6rem 0;
+}
+.discos {
+    align-items: flex-start;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+.cd-wrapper {
+    margin: 3rem;
+}
+.cd {
+    display: flex;
+    margin: 0 0 3rem;
+}
+.cd img {
+    margin-right: 3rem;
+}
+.cd .cd-name {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.cd .cd-info {
+    font-size: 1.4rem;
+    max-width: 40ch;
+}
+.cd2 {margin-left: 300px;}
+
+.discos2 {
+    background-color: var(--brandBlue);
+}
+
+.discos3{
+    background-color: var(--brandRed);
+}
+.discos4{
+    background-color: var(--brandGreen);
+}
