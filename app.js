@@ -17,24 +17,25 @@ let intro = gsap.timeline({
 }});
 
 intro.to('.intro-logo', {
+        duration: 1,
         scale:0,
-        y:-800
+        y:-600,
     })
 
     .fromTo('.intro-sub', {
         opacity: 0,
         y: 500
     },{
-        duration: 3,
+        duration: 1,
         opacity:1,
         y:100
     },)
 
     .to('.intro-sub', {
-        duration: 3,
-        y:-600,
+        duration: 4,
+        y:-200,
         opacity: 0
-    })
+    }, '<8')
 
     .to('.paralax', {
         backgroundColor: 'black',
@@ -49,26 +50,23 @@ intro.to('.intro-logo', {
         markers: true,
         start: 'top 10%',
         toggleActions: 'restart none none reverse',
-        scrub: 2,
-        end: '+=200',
+        scrub: 4,
+        end: '+=500',
         pin: true
     }});
 
     paralax.from('.paralax .stars', {
-        duration:1,
-        y: 200
+        y: 150
     })
     .from('.paralax .meow', {
         y: 400
     }, '<')
     .from('.paralax .paralax-title', {
-        duration:1,
         y: 800
     }, '<')
     .fromTo('.paralax .bubbles', {
         y: 700
     }, {
-        duration:1,
         y:-900, 
         filter: 'blur(2px)',
         opacity: 0.6
@@ -199,6 +197,147 @@ intro.to('.intro-logo', {
     })
 
 
+    gsap.from('.looks-wrapper h2, .looks-wrapper img', {
+        duration:1,
+        scale: 2,
+        stagger:0.5,
+        scrollTrigger: {
+            trigger: '.looks',
+            scrub: true,
+            end: '80% 80%'
+        }
+    })
+
+    gsap.from('.look-content-wrapper1', {
+        scrollTrigger: {
+            trigger: '.look-content-wrapper1',
+            pin: true,
+            pinSpacing: false
+        }
+    })
+
+    gsap.from('.look-content-wrapper2', {
+        scrollTrigger: {
+            trigger: '.look-content-wrapper2',
+            pin: true,
+            pinSpacing: false
+        }
+    })
+
+    gsap.from('.look-content-wrapper3', {
+        scrollTrigger: {
+            trigger: '.look-content-wrapper3',
+            pin: true,
+            pinSpacing: false
+        }
+    })
+
+    gsap.from('.look-content-wrapper4', {
+        scrollTrigger: {
+            trigger: '.look-content-wrapper4',
+            pin: true,
+            pinSpacing: false
+        }
+    })
+
+    gsap.from('.look-content-wrapper5', {
+        scrollTrigger: {
+            trigger: '.look-content-wrapper5',
+            pin: true,
+            pinSpacing: false
+        }
+    })
+
+    gsap.from('.look-content-wrapper6', {
+        scrollTrigger: {
+            trigger: '.look-content-wrapper6',
+            pin: true,
+        }
+    })
+
+    gsap.from('.lookpic1, .look1', {
+        filter: 'blur(4px)',
+        duration:1,
+        opacity:0,
+        scale: 1.2,
+        stagger:1,
+        scrollTrigger: {
+            trigger: '.look-content-wrapper1',
+            start: 'top 80%',
+            markers: true,
+        }
+    })
+
+    gsap.from('.lookpic2, .look2', {
+        filter: 'blur(4px)',
+        duration:1,
+        opacity:0,
+        scale: 1.2,
+        stagger:1,
+        scrollTrigger: {
+            trigger: '.look-content-wrapper2',
+            start: 'top 80%',
+        }
+    })
+
+    gsap.from('.lookpic3, .look3', {
+        filter: 'blur(4px)',
+        duration:1,
+        opacity:0,
+        scale: 1.2,
+        stagger:1,
+        scrollTrigger: {
+            trigger: '.look-content-wrapper3',
+            start: 'top 80%',
+        }
+    })
+
+    gsap.from('.lookpic4, .look4', {
+        filter: 'blur(4px)',
+        duration:1,
+        opacity:0,
+        scale: 1.2,
+        stagger:1,
+        scrollTrigger: {
+            trigger: '.look-content-wrapper4',
+            start: 'top 80%',
+        }
+    })
+
+    gsap.from('.lookpic5, .look5', {
+        filter: 'blur(4px)',
+        duration:1,
+        opacity:0,
+        scale: 1.2,
+        stagger:1,
+        scrollTrigger: {
+            trigger: '.look-content-wrapper5',
+            start: 'top 80%',
+        }
+    })
+
+    gsap.from('.lookpic6, .look6', {
+        filter: 'blur(4px)',
+        duration:1,
+        opacity:0,
+        scale: 1.2,
+        stagger:1,
+        scrollTrigger: {
+            trigger: '.look-content-wrapper6',
+            start: 'top 80%'
+        }
+    })
+
+    gsap.from('.end img', {
+        duration:1,
+        opacity:0,
+        scale: 2,
+        scrollTrigger: {
+            trigger: '.end',
+            scrub: true,
+            end: '80% 80%'
+        }
+    })
 
 
 
