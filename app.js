@@ -8,7 +8,7 @@ gsap.from('.intro-logo', {
 let intro = gsap.timeline({
     scrollTrigger: {
     trigger: 'header',
-    markers: true,
+    // markers: true,
     scrub: 1,
     pin: true,
     // pinSpacing: false,
@@ -17,7 +17,7 @@ let intro = gsap.timeline({
 }});
 
 intro.to('.intro-logo', {
-        duration: 1,
+        duration: 2,
         scale:0,
         y:-600,
     })
@@ -47,7 +47,6 @@ intro.to('.intro-logo', {
     let paralax = gsap.timeline({
         scrollTrigger: {
         trigger: '.paralax-wrapper',
-        markers: true,
         start: 'top 10%',
         toggleActions: 'restart none none reverse',
         scrub: 4,
@@ -77,7 +76,6 @@ intro.to('.intro-logo', {
         scrollTrigger: {
             trigger: '.discos1',
             start: 'top top',
-            markers: true,
             toggleActions: 'restart none none reverse',
             scrub: 2,
             end: '+=200',
@@ -126,10 +124,9 @@ intro.to('.intro-logo', {
         scrollTrigger: {
             trigger: '.discos2',
             start: 'top top',
-            markers: true,
             toggleActions: 'restart none none reverse',
             // scrub: 2,
-            end: '+=1000',
+            // end: '+=1000',
             pin: true,
             pinSpacing: false
         }});
@@ -145,13 +142,16 @@ intro.to('.intro-logo', {
 
     .from('.cd4 .cd-name, .cd4 .cd-info, .cd4 .cd-img', {
         opacity:0.3,
-    })
+    },0)
+
+    .from('.cd5 .cd-name, .cd5 .cd-info, .cd5 .cd-img', {
+        opacity:0.5,
+    },0)
 
     let discos3 = gsap.timeline({
         scrollTrigger: {
             trigger: '.discos3',
             start: 'top top',
-            markers: true,
             toggleActions: 'restart none none reverse',
             // scrub: true,
             end: '+=1000',
@@ -164,35 +164,11 @@ intro.to('.intro-logo', {
         opacity:0.3
     })
 
-    .from('.cd5 .cd-name, .cd5 .cd-info, .cd5 .cd-img', {
-        opacity:0.5,
-    }, 0)
-
     .from('.cd6 .cd-name, .cd6 .cd-info, .cd6 .cd-img', {
         opacity:0.3,
-    })
-
-    let discos4 = gsap.timeline({
-        scrollTrigger: {
-            trigger: '.discos4',
-            start: 'top top',
-            markers: true,
-            toggleActions: 'restart none none reverse',
-            // scrub: 2,
-            end: '+=1000',
-            pin: true,
-            // pinSpacing: false
-        }});
-
-    discos4.from('.discos4 .year', {
-        y:500,
-        opacity:0.3
-    })
+    },0)
+    
     .from('.cd7 .cd-name, .cd7 .cd-info, .cd7 .cd-img', {
-        opacity:0.5,
-    }, 0)
-
-    .from('.cd8 .cd-name, .cd8 .cd-info, .cd8 .cd-img', {
         opacity:0.3,
     })
 
@@ -264,7 +240,6 @@ intro.to('.intro-logo', {
         scrollTrigger: {
             trigger: '.look-content-wrapper1',
             start: 'top 80%',
-            markers: true,
         }
     })
 
