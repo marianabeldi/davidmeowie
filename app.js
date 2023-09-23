@@ -11,31 +11,29 @@ let intro = gsap.timeline({
     // markers: true,
     scrub: 1,
     pin: true,
-    // pinSpacing: false,
-    end: '+=500',
+    pinSpacing: false,
+    end: '+=600',
     toggleActions: 'restart none none reverse',
 }});
 
 intro.to('.intro-logo', {
-        duration: 2,
-        scale:0,
-        y:-600,
+        scale: 0.8,
     })
 
-    .fromTo('.intro-sub', {
+    .from('.intro-sub', {
         opacity: 0,
         y: 500
-    },{
-        duration: 1,
-        opacity:1,
-        y:100
-    },)
+    }, '<')
 
-    .to('.intro-sub', {
+    .from('.bg-black', {
         duration: 4,
-        y:-200,
-        opacity: 0
-    }, '<8')
+        yPercent: 100,
+    })
+
+    .to('.intro-sub, .intro-logo', {
+        duration:1,
+        filter: 'invert(1)'
+    }, '<2')
 
     .to('.paralax', {
         backgroundColor: 'black',
@@ -75,11 +73,11 @@ intro.to('.intro-logo', {
     let discos1 = gsap.timeline({
         scrollTrigger: {
             trigger: '.discos1',
-            start: 'top top',
+            start: 'top 50%',
             toggleActions: 'restart none none reverse',
             scrub: 2,
             end: '+=200',
-            pin: true,
+            // pin: true,
             // pinSpacing: false
         }});
 
@@ -123,12 +121,12 @@ intro.to('.intro-logo', {
     let discos2 = gsap.timeline({
         scrollTrigger: {
             trigger: '.discos2',
-            start: 'top top',
+            start: 'top 40%',
             toggleActions: 'restart none none reverse',
             // scrub: 2,
-            // end: '+=1000',
-            pin: true,
-            pinSpacing: false
+            // end: '+=300',
+            // pin: true,
+            // pinSpacing: false
         }});
 
     discos2.from('.discos2 .year', {
@@ -136,40 +134,81 @@ intro.to('.intro-logo', {
         opacity:0.3,
     })
 
-    .from('.cd3 .cd-name, .cd3 .cd-info, .cd3 .cd-img', {
-        opacity:0.5,
-    }, 0)
-
-    .from('.cd4 .cd-name, .cd4 .cd-info, .cd4 .cd-img', {
-        opacity:0.3,
+    .from('.cd3 .cd-name', {
+        y:400,
+        opacity:0
     },0)
 
-    .from('.cd5 .cd-name, .cd5 .cd-info, .cd5 .cd-img', {
-        opacity:0.5,
+    .from('.cd3 .cd-info', {
+        y: 900,
+        opacity:0
     },0)
+
+    .from('.cd3 .cd-img', {
+        opacity:0,
+        x:-800,
+        transformOrigin: 'left center',
+    },0)
+
+    .from('.cd4 .cd-name', {
+        y:300,
+        opacity:0
+    },)
+
+    .from('.cd4 .cd-info', {
+        y: 500,
+        opacity:0
+    },'<')
+
+    .from('.cd4 .cd-img', {
+        opacity:0,
+        x:-800,
+        transformOrigin: 'left center',
+    },'<')
+
+    .from('.cd5 .cd-name', {
+        y:300,
+        opacity:0
+    },)
+
+    .from('.cd5 .cd-info', {
+        y: 500,
+        opacity:0
+    },'<')
+
+    .from('.cd5 .cd-img', {
+        opacity:0,
+        x:-800,
+        transformOrigin: 'left center',
+    },'<')
+
 
     let discos3 = gsap.timeline({
         scrollTrigger: {
             trigger: '.discos3',
-            start: 'top top',
+            start: 'top 50%',
             toggleActions: 'restart none none reverse',
-            // scrub: true,
-            end: '+=1000',
-            pin: true,
-            pinSpacing: false
+            scrub: true,
+            end: '+=600',
+            // pin: true,
+            // pinSpacing: false
         }});
 
     discos3.from('.discos3 .year', {
-        y:500,
+        yPercent: 200,
         opacity:0.3
     })
 
     .from('.cd6 .cd-name, .cd6 .cd-info, .cd6 .cd-img', {
-        opacity:0.3,
-    },0)
+        opacity:0,
+        stagger: 0.5,
+        yPercent: 100
+    })
     
     .from('.cd7 .cd-name, .cd7 .cd-info, .cd7 .cd-img', {
-        opacity:0.3,
+        opacity:0,
+        stagger: 0.5,
+        yPercent: 100
     })
 
 

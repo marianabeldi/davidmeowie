@@ -4,7 +4,7 @@
     --brandGreen: #3B8D7C;
     --brandBlack: #000;
     --brandRed: #F94936;
-    --fontTitle: font-family: "futura-pt", sans-serif;
+    --fontTitle: "futura-pt-condensed", sans-serif;
 }
 
 body {
@@ -15,9 +15,10 @@ body {
 }
 h1 {
     font-family: var(--fontTitle);
-    font-size: 6rem;
-    letter-spacing: 5px;
+    font-size: 3.2rem;
+    font-weight: 400;
     line-height: 1;
+    margin: 64vh 0; 
 }
 h2 {
     font-family: var(--fontTitle);
@@ -33,16 +34,14 @@ header { height: 100vh; }
     width: 100vw;
     position: relative;
 }
-.intro h1, .intro h2, .intro img {
+.intro h1, .intro img {
     position: absolute;
     height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
 }
-.intro h1 {  margin: 25vh auto; }
-
-.paralax {  margin: -300px 0 0; }
+/* .paralax {  margin: -300px 0 0; } */
 .paralax-wrapper {
     position: relative;
     height: 100vh;
@@ -63,14 +62,15 @@ header { height: 100vh; }
 }
 
 .year {
+    align-self: flex-start;
     font-size: 7rem;
     transform: rotate(-90deg);
     transform-origin: center;
     width: max-content;
-    margin: 6rem 0;
+    margin: 9rem 0 0 0;
 }
 .discos {
-    align-items: flex-start;
+    align-items: center;
     display: flex;
     height: 100vh;
     width: 100vw;
@@ -131,6 +131,7 @@ header { height: 100vh; }
     align-items: center;
     display: flex;
     justify-content: space-around;
+    overflow: hidden;
 }
 .look-year {
     font-size: 7rem;
