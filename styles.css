@@ -1,7 +1,7 @@
 :root {
     --brandYellow: #F9BD38;
     --brandBlue: #7FA8D6;
-    --brandGreen: #3B8D7C;
+    --brandGreen: #49a894;
     --brandBlack: #000;
     --brandRed: #F94936;
     --fontTitle: "futura-pt-condensed", sans-serif;
@@ -63,6 +63,7 @@ header { height: 100vh; }
 
 .year {
     align-self: flex-start;
+    font-family: var(--fontTitle);
     font-size: 7rem;
     transform: rotate(-90deg);
     transform-origin: center;
@@ -113,7 +114,7 @@ header { height: 100vh; }
 .looks-title {
     color: white;
     font-family: var(--fontTitle);
-    font-size: 15rem;
+    font-size: 16rem;
     letter-spacing: 5px;
     line-height: 1;
     margin: 2rem auto;
@@ -134,6 +135,7 @@ header { height: 100vh; }
     overflow: hidden;
 }
 .look-year {
+    font-family: var(--fontTitle);
     font-size: 7rem;
     flex: 1 1 20%;
     padding: 3rem;
@@ -204,9 +206,7 @@ header { height: 100vh; }
     .cd:nth-child(even) { margin-left: 0;}
     h2 { font-size: 3rem; }
     h1 { font-size: 3rem; }
-    .pic-wrapper {
-        display: none;
-    }    
+    .pic-wrapper, .bg-black, .cd.cd5 { display: none; }
 }
 @media screen and (max-width: 48em) {  
     .looks-title { font-size: 5rem; }

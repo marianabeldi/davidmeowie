@@ -121,7 +121,7 @@ intro.to('.intro-logo', {
     let discos2 = gsap.timeline({
         scrollTrigger: {
             trigger: '.discos2',
-            start: 'top 40%',
+            start: 'top 50%',
             toggleActions: 'restart none none reverse',
             // scrub: 2,
             // end: '+=300',
