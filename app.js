@@ -7,13 +7,12 @@ gsap.from('.intro-logo', {
 
 let intro = gsap.timeline({
     scrollTrigger: {
-    trigger: 'header',
-    // markers: true,
-    scrub: 1,
-    pin: true,
-    pinSpacing: false,
-    end: '+=600',
-    toggleActions: 'restart none none reverse',
+        trigger: 'header',
+        // markers: true,
+        scrub: 1,
+        pin: true,
+        pinSpacing: false,
+        end: '+=600',
 }});
 
 intro.to('.intro-logo', {
@@ -45,11 +44,10 @@ intro.to('.intro-logo', {
     let paralax = gsap.timeline({
         scrollTrigger: {
         trigger: '.paralax-wrapper',
-        start: 'top 10%',
-        toggleActions: 'restart none none reverse',
-        scrub: 4,
-        end: '+=500',
-        pin: true
+        start: 'top top',
+        scrub: 2,
+        end: '+=600',
+        pin: true,
     }});
 
     paralax.from('.paralax .stars', {
@@ -65,7 +63,6 @@ intro.to('.intro-logo', {
         y: 700
     }, {
         y:-900, 
-        filter: 'blur(2px)',
         opacity: 0.6
     }, '<')
 
@@ -74,11 +71,9 @@ intro.to('.intro-logo', {
         scrollTrigger: {
             trigger: '.discos1',
             start: 'top 50%',
-            toggleActions: 'restart none none reverse',
+            // toggleActions: 'restart none none reverse',
             scrub: 2,
             end: '+=200',
-            // pin: true,
-            // pinSpacing: false
         }});
 
     discos1.from('.discos1 .year', {
@@ -123,10 +118,6 @@ intro.to('.intro-logo', {
             trigger: '.discos2',
             start: 'top 50%',
             toggleActions: 'restart none none reverse',
-            // scrub: 2,
-            // end: '+=300',
-            // pin: true,
-            // pinSpacing: false
         }});
 
     discos2.from('.discos2 .year', {
@@ -190,8 +181,6 @@ intro.to('.intro-logo', {
             toggleActions: 'restart none none reverse',
             scrub: true,
             end: '+=600',
-            // pin: true,
-            // pinSpacing: false
         }});
 
     discos3.from('.discos3 .year', {
@@ -213,7 +202,6 @@ intro.to('.intro-logo', {
 
 
     gsap.from('.looks-wrapper h2, .looks-wrapper img', {
-        duration:1,
         scale: 2,
         stagger:0.5,
         scrollTrigger: {
@@ -271,7 +259,6 @@ intro.to('.intro-logo', {
     })
 
     gsap.from('.lookpic1, .look1', {
-        filter: 'blur(4px)',
         duration:1,
         opacity:0,
         scale: 1.2,
@@ -283,7 +270,6 @@ intro.to('.intro-logo', {
     })
 
     gsap.from('.lookpic2, .look2', {
-        filter: 'blur(4px)',
         duration:1,
         opacity:0,
         scale: 1.2,
@@ -295,7 +281,6 @@ intro.to('.intro-logo', {
     })
 
     gsap.from('.lookpic3, .look3', {
-        filter: 'blur(4px)',
         duration:1,
         opacity:0,
         scale: 1.2,
@@ -307,7 +292,6 @@ intro.to('.intro-logo', {
     })
 
     gsap.from('.lookpic4, .look4', {
-        filter: 'blur(4px)',
         duration:1,
         opacity:0,
         scale: 1.2,
@@ -319,7 +303,6 @@ intro.to('.intro-logo', {
     })
 
     gsap.from('.lookpic5, .look5', {
-        filter: 'blur(4px)',
         duration:1,
         opacity:0,
         scale: 1.2,
@@ -331,7 +314,6 @@ intro.to('.intro-logo', {
     })
 
     gsap.from('.lookpic6, .look6', {
-        filter: 'blur(4px)',
         duration:1,
         opacity:0,
         scale: 1.2,
