@@ -228,8 +228,15 @@ header { height: 100vh; }
         max-width: 50%;
     }
     .paralax .meow {
-        bottom: -322px;
+        bottom: -281px;
         left: calc(50% - 170px);
+        height: 840px;
         width: 340px;
+    }
+    .paralax .stars {
+        object-fit: cover;
+    }
+    .looks {
+        height: 80vh;
     }
 }
