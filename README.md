@@ -1,3 +1,3 @@
 # davidmeowie
-Ejemplo de ScrollTrigger para taller de Nerdearla
+Ejemplo de GSAP ScrollTrigger Plugin para taller de Nerdearla 2023
 https://marianabeldi.github.io/davidmeowie/
